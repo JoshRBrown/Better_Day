@@ -10,14 +10,14 @@ class TableOfContents extends Component {
       <div><h1>WHERE TO?</h1></div>
       <div className='index-button'>
       <Link to='/journal'>
-        <button className='btn btn-primary'>
+        <button className='btn btn-warning'>
           My Journal
         </button>
       </Link>
       </div>
       <div className='index-button'>
       <Link to='/posts'>
-        <button className='btn btn-primary'>Browse Entries</button>
+        <button className='btn btn-warning'>Browse Entries</button>
       </Link>
       </div>
       </div>

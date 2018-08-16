@@ -19,7 +19,7 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
-    <div>
+    <div className='container'>
       <Switch>
         <Route path='/index' component={TableOfContents} />
         <Route path='/journal' component={Journal} />

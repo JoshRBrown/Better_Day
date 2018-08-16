@@ -25,6 +25,30 @@ class PostsNew extends Component {
     );
   }
 
+  renderCategories(field) {
+    const className = `form-group ${field.meta.touched && field.meta.error ? 'has-danger' : ''}`
+
+    return (
+      <div className={className}>
+  
+        <label>{field.label}</label>
+        <select name={field.name} {...field.input} className='form-control' >
+          <option value="Recovery">Recovery</option>
+          <option value="Weight Gain">Weight Gain</option>
+          <option value="Weight Loss">Weight Loss</option>
+          <option value="Fitness">Fitness</option>
+          <option value="Meditation">Meditation</option>
+          <option value="Sleep">Better Sleep</option>
+          <option value="Skill">New Skill</option>
+          <option value="Reading">Reading</option>
+          <option value="Writing">Writing</option>
+          <option value="Anxiety">Anxiety</option>
+          <option value="Depression">Depression</option>
+        </select>
+      </div>
+    )
+  }
+
   renderContent(field) {
     const className = `form-group ${field.meta.touched && field.meta.error ? 'has-danger' : ''}`
 
@@ -63,15 +87,15 @@ class PostsNew extends Component {
         <Field 
           label='Categories'
           name='categories'
-          component={this.renderField}
+          component={this.renderCategories}
         />
         <Field 
           label='Content'
           name='content'
           component={this.renderContent}
         />
-        <button type='submit' className='btn btn-primary'>Submit</button>
-        <Link className='btn btn-danger' to='/'>Cancel</Link>
+        <button type='submit' className='btn btn-warning'>Submit</button>
+        <Link className='btn btn-danger' to='/index'>Cancel</Link>
       </form>
     );
   };
