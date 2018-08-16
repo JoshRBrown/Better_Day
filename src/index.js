@@ -9,6 +9,9 @@ import reducers from './reducers';
 import PostsIndex from './components/posts_index';
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show';
+import SignIn from './components/sign_in';
+import TableOfContents from './components/table_of_contents';
+import Journal from './components/my_journal';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -18,9 +21,12 @@ ReactDOM.render(
     <BrowserRouter>
     <div>
       <Switch>
+        <Route path='/index' component={TableOfContents} />
+        <Route path='/journal' component={Journal} />
         <Route path='/posts/new' component={PostsNew} />
         <Route path='/posts/:id' component={PostsShow} />
-        <Route path='/' component={PostsIndex} />
+        <Route path='/posts' component={PostsIndex} />
+        <Route path='/' component={SignIn} />
       </Switch>
     </div>
     </BrowserRouter>

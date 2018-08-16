@@ -13,7 +13,7 @@ class PostsShow extends Component {
   onDeleteClick() {
     const id = this.props.match.params.id;
     this.props.deletePost(id, () => {
-      this.props.history.push('/');
+      this.props.history.push('/index');
     });
   }
 
@@ -26,7 +26,7 @@ class PostsShow extends Component {
 
     return (
       <div>
-        <Link to='/' className='btn btn-primary' >Back to Index</Link>
+        <Link to='/index' className='btn btn-primary' >Back to Index</Link>
         <button
           className='btn btn-danger pull-xs-right'
           onClick={this.onDeleteClick.bind(this)}  
@@ -34,7 +34,7 @@ class PostsShow extends Component {
           Delete
         </button>
         <h3>{post.title}</h3>
-        <h6>Category:  {post.categories}</h6>
+        <h6>Category:  {post.category}</h6>
         <p>{post.content}</p>
       </div>
     );
