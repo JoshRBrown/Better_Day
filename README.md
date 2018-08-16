@@ -24,8 +24,9 @@ Better Day is an online resource that allows you to keep a journal as well as an
 
 ## Where to find it
 
-Project is currently unhosted but the full repo for the front end can be found here ******.
-The back end for the project can be found here *********. 
+Project is currently unhosted but the full repo for the front end can be found here: https://github.com/JoshRBrown/Better_Day.
+The back end for the project can be found here:
+https://github.com/JoshRBrown/Better_Day_Back. 
 
 
 ## Walkthrough
