@@ -34,16 +34,12 @@ class PostsNew extends Component {
         <label>{field.label}</label>
         <select name={field.name} {...field.input} className='form-control' >
           <option value="Recovery">Recovery</option>
-          <option value="Weight Gain">Weight Gain</option>
-          <option value="Weight Loss">Weight Loss</option>
           <option value="Fitness">Fitness</option>
-          <option value="Meditation">Meditation</option>
+          <option value="Mindfulness">Mindfulness</option>
           <option value="Sleep">Better Sleep</option>
-          <option value="Skill">New Skill</option>
           <option value="Reading">Reading</option>
           <option value="Writing">Writing</option>
-          <option value="Anxiety">Anxiety</option>
-          <option value="Depression">Depression</option>
+          <option value="Mental Health">Mental Health</option>
         </select>
       </div>
     )

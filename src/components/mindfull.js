@@ -12,9 +12,13 @@ class PostsIndex extends Component {
   }
 
   renderPosts() {
-    return _.map(this.props.posts, post => {
+    let fixedArr = _.filter(this.props.posts, post => {
+      return post.category === 'Mindfulness'
+    })
+    console.log(fixedArr)
+    return _.map(fixedArr, post => {
       return (
-        <Link to={`/posts/${post.post_id}`} key={post.post_id} className='list-links'>
+        <Link to={`/posts/${post.post_id}`} key={post.id}>
           <li className='list-group-item' key={post.post_id}>
             {post.title}
           </li>
@@ -33,7 +37,7 @@ class PostsIndex extends Component {
           </Link>
           </span>
         </div>
-        <h3>Entries</h3>
+        <h3>Posts</h3>
         <ul className='list-group'>
           {this.renderPosts()}
         </ul>

@@ -32,6 +32,10 @@ li {
   transform: translate(-50%, -50%);
 }
 
+.centered h1 {
+  margin-left: 15%;
+}
+
 
 .index-button {
   margin: 10px;
@@ -77,4 +81,12 @@ li {
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 
 }
+.btn {
+  margin: 10px;
+}
 
+.journal-button {
+  width: 70%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
