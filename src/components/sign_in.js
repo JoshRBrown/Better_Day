@@ -33,6 +33,10 @@ class SignIn extends Component {
 
   render() {
     return (
+    <div className='container'>
+      <div className='title-holder'>
+        <h1 className='title'>BETTER DAY</h1>
+      </div>
       <form onSubmit={this.props.handleSubmit(this.onSubmit.bind(this))}>
         <div>
           <Field name='userName' component={this.renderField} label='Username' />
@@ -40,9 +44,10 @@ class SignIn extends Component {
         <div>
           <Field name='password' component={this.renderField} label='Password' />
         </div>
-        <button type='submit'>Log In</button>
+        <button type='submit' className='btn btn-warning'>Log In</button>
         {/* <Link className='btn' to='/posts'>Log In</Link> */}
       </form>
+    </div>
     )
   }
 }

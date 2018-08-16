@@ -13,7 +13,7 @@ class PostsIndex extends Component {
 
   renderPosts() {
     let fixedArr = _.filter(this.props.posts, post => {
-      return post.user_id === this.props.user.undefined
+      return post.category === 'Mental Health'
     })
     console.log(fixedArr)
     return _.map(fixedArr, post => {
@@ -30,31 +30,29 @@ class PostsIndex extends Component {
   render () {
     return (
       <div>
-        <div className='text-xs-left'>
-          <Link className='btn btn-warning index-button' to='/posts/new'>
+        <div>
+          <span className='text-xs-left'>
+          <Link className='btn btn-warning' to='/posts/new'>
           Add a Post
           </Link>
+          </span>
         </div>
-        <h3 >Entries</h3>
+        <h3>Posts</h3>
         <ul className='list-group'>
           {this.renderPosts()}
         </ul>
-        <div className='text-xs-left'>
-          <Link className='btn btn-warning index-button' to='/index'>
+          <span className='text-xs-right'>
+          <Link className='btn btn-warning' to='/index'>
             Index
           </Link>
-        </div>
+          </span>
       </div>
     );
   };
 };
 
 function mapStateToProps(state) {
-  console.log(state)
-  return {
-    posts: state.posts,
-    user: state.user
-  };
+  return {posts: state.posts};
 };
 
 export default connect(mapStateToProps, {fetchPosts})(PostsIndex);
