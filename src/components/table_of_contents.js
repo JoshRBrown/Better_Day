@@ -34,7 +34,7 @@ class TableOfContents extends Component {
       <Link to='/posts/writing'>
         <button className='btn btn-warning'>Writing</button>
       </Link>
-      <Link to='/posts/mhealth'>
+      <Link to='/posts/mentalhealth'>
         <button className='btn btn-warning'>Mental Health</button>
       </Link>
       </div>
