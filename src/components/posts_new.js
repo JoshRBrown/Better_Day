@@ -44,14 +44,15 @@ class PostsNew extends Component {
   }
 
   onSubmit(values) {
-    this.props.createPost(values, () => {
-      this.props.history.push('/');
+    let user = this.props.user.undefined;
+    let newValues = {...values, ['user_id']: user}
+    this.props.createPost(newValues, () => {
+      this.props.history.push('/index');
     });
   }
 
   render() {
     const {handleSubmit} = this.props;
-
     return (
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field 
@@ -92,9 +93,13 @@ function validate(values) {
   return errors;
 }
 
+function mapStateToProps(state) {
+  return {user: state.user}
+}
+
 export default reduxForm({
   validate, 
   form: 'PostsNewform'
 })(
-  connect(null, {createPost})(PostsNew)
+  connect(mapStateToProps, {createPost})(PostsNew)
 );
